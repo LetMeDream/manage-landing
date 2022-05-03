@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage</title>
+    <link rel="stylesheet" href="/dist/output.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navegacion relative container h-9 mx-auto">
+        <!-- Flex container -->
+        <div class="flex items-center justify-between p-6">
+            <!-- logo -->
+            <img class="navegacion__logo pt-2" src="img/logo.svg" alt="Logo">
+            <!-- menu items -->
+            <div class="navegacion__links hidden md:flex space-x-6">
+                <a class="hover:text-darkGrayishBlue" href="#">Pricing</a>
+                <a class="hover:text-darkGrayishBlue" href="#">Products</a>
+                <a class="hover:text-darkGrayishBlue" href="#">About us</a>
+                <a class="hover:text-darkGrayishBlue" href="#">Careers</a>
+                <a class="hover:text-darkGrayishBlue" href="#">Community</a>
+            </div>
+            <!-- button -->
+            <a class="navegacion__boton hidden md:block p-3 px-6 pt-2 text-white bg-brightRed rounded-full
+                      hover:bg-brightRedLight  " href="#">
+                Get Started
+            </a>
+
+            <!-- Hamburgue Icon; Mobile only -->
+            <button id="menu-btn" class="hamburguer block md:hidden focus:outline-none">
+                <span class="hamburguer-top"></span>
+                <span class="hamburguer-middle"></span>
+                <span class="hamburguer-bottom"></span>
+            </button>
+
+        </div>
+
+        <!-- Outside of the div, lets create our Menu -->
+        <div class="md:hidden">
+            <div id="menu" class="absolute flex-col items-center py-8 mt-1
+                                space-y-6 font-bold bg-white w-full
+                                drop-shadow-md hidden">
+                    <a href="#">Pricing</a>
+                    <a href="#">Product</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Community</a>
+            </div>
+        </div>
+
+
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <!-- flex container -->
+        <div class="container mx-auto flex flex-col-reverse md:flex-row items-center px-6 space-y-0
+                    mt-10">
+            <!-- Left item -->
+            <div class="flex flex-col mb-32 space-y-12 md:w-1/2">
+                <h1 class="max-w-md text-4xl font-bold text-center md:text-5xl md:text-left">
+                    Bring everyone together to build better products
+                </h1>
+                <p class="max-w-sm text-center md:text-left text-darkGrayishBlue">
+                    Manage makes it simple for software teams to plan day-to-day tasks while
+                    keeping the larger team goals in view
+                </p>
+                <div class="flex justify-center md:justify-start">
+                    <a class="p-3 pt-2 px-6 bg-brightRed text-white rounded-full hover:bg-brightRedLight" href="#">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+            <!-- Image -->
+            <div class="md:w-1/2">
+                <img src="img/illustration-intro.svg" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- Features Section -->
+    <section id="features">
+        <!-- flex container -->
+        <div class="container mx-auto flex flex-col px-4 mt-10 space-y-12 md:space-y-0 md:flex-row">
+            <!-- What's diff -->
+            <div class="flex flex-col items-center md:block space-y-12 md:w-1/2">
+                <h2 class="max-w-md text-4xl font-bold text-center md:text-left">
+                    What's different about Manage?
+                </h2>
+                <p class="max-w-xs text-darkGrayishBlue text-center md:text-left">
+                    Manages provides all the functionality you team needs, without the complexity.
+                    Our software is tailor-made for modern digital product teams.
+                </p>
+            </div>
+            <!-- Numbered list -->
+            <div class="flex flex-col space-y-8 md:w-1/2">
+                <!-- First item -->
+                <div class="md:flex space-x-2">
+                    <!-- COLORED heading; mobile -->
+                    <div class="rounded-l-full bg-brightRedSupLight w-full md:w-auto flex items-center space-x-2 md:bg-transparent ">
+                        <!-- numbernumber -->
+                        <div class="px-4 py-2 font-bold md:self-start text-white rounded-full bg-brightRed">
+                            01
+                        </div>
+                        <!-- title; mobile -->
+                        <h3 class="text-base font-bold md:mb-4 md:hidden">
+                            Track company-wide progress
+                        </h3>
+
+                    </div>
+                    <!-- text;mobile -->
+                    <p class="md:hidden text-justify text-darkGrayishBlue md:text-left">
+                        See how your day-to-day tasks fit into the wider vision.
+                        Go from tracking progress on the milestone level all the way down
+                        to the smallest of details. Never lose sight of the bigger picture again.
+                    </p>
+
+                    <!-- medium item; md -->
+                    <div class="">
+                        <h3 class="text-lg font-bold md:mb-4 hidden md:block">
+                            Track company-wide progress
+                        </h3>
+                        <p class="hidden md:block text-center text-darkGrayishBlue md:text-left">
+                            See how your day-to-day tasks fit into the wider vision.
+                            Go from tracking progress on the milestone level all the way down
+                            to the smallest of details. Never lose sight of the bigger picture again.
+                        </p>
+                    </div>
+
+                </div>
+                <!-- Second item -->
+                <div class="md:flex md:space-x-2">
+                    <!-- heading; mobile -->
+                    <div class="flex items-center rounded-l-full bg-brightRedSupLight md:bg-transparent space-x-2">
+                        <div class="p-2 self-start text-white font-bold px-4 bg-brightRed rounded-full">02</div>
+                        <h3 class="font-bold text-base md:text-left md:hidden">Advanced built-in reports</h3>
+                        
+                    </div>
+                    <!-- text; mobile -->
+                    <p class="text-justify text-darkGrayishBlue md:text-left md:hidden">
+                        Set internal delivery estimates and track progress toward company goals.
+                        Our customizable dashboard helps you build out the reports you need to keep key
+                        stakeholders informed.
+                    </p>
+                    <!-- Second item; medium -->
+                    <div class="hidden md:block  space-y-2">
+                        <h5 class="font-bold text-lg text-center md:text-left">Advanced built-in reports</h5>
+                        <p class="text-center text-darkGrayishBlue md:text-left">
+                            Set internal delivery estimates and track progress toward company goals.
+                            Our customizable dashboard helps you build out the reports you need to keep key
+                            stakeholders informed.
+                        </p>
+                    </div>
+
+                </div>
+                <!-- Third item -->
+                <div class="md:flex md:space-x-2 pb-4">
+
+                    <!-- COLORED heading;mobile -->
+                    <div class="flex items-center space-x-2 md:space-x-0 bg-brightRedSupLight rounded-l-full md:bg-transparent">                        
+                        <!-- number;mobile -->
+                        <div class="p-2 self-start text-white font-bold px-4 bg-brightRed rounded-full">03</div>
+                        <!-- title;mobile -->
+                        <h5 class="font-bold text-md text-center md:text-left md:hidden">Everything you need in one place</h5>
+                    </div>
+
+                    <div class="space-y-2">
+                        <!-- title -->
+                        <h5 class="font-bold text-lg text-center md:text-left hidden md:block">Everything you need in one place</h5>
+                        <p class="text-justify text-darkGrayishBlue md:text-left md:max-w-sm">
+                            Stop jumping from one service to another to communicate story file, track tasks and share documents
+                            Manages offers an all-in-one team productivity solution.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials section -->
+    <section id="testimonials">
+        <!-- Contains the heading and the testimonials, yea, obviously -->
+        <div class="container max-w-6xl pt-5 pb-2 mx-auto md:mt-32 text-center">
+            <!-- Heading -->
+            <h2 class="text-4xl font-bold">
+                What they've said
+            </h2>
+
+            <!-- cards/testimonial -->
+            <div id="cards" class="flex justify-center">
+                <!-- Anisha Lee -->
+                <div class="p-2 md:flex flex-col items-center space-y-4 hidden md:w-1/3">
+                    <!-- img -->
+                    <img src="./img/avatar-anisha.png" alt="" class="w-20 my-4 relative top-20 z-10">
+                    <!-- text -->
+                    <div class="bg-veryLightGray self-stretch py-16 relative top-3 z-0">
+                        <p class='x text-darkBlue text-xl font-bold'>Anisha Lee</p>
+                        <p class="max-w-xs mx-auto text-center font-semibold text-darkGrayishBlue">
+                            "Manage has superchanged our team workflow. The ability to mantain visibility
+                            on larger milestones at all times keeps everyone motivated.""
+                        </p>
+                    </div>
+                    <div>
+
+                    </div>
+
+                </div>
+                <!-- Ali Bravo -->
+                <div class="p-2 flex flex-col items-center space-y-4 md:w-1/3">
+                    <!-- img -->
+                    <img src="./img/avatar-ali.png" alt="" class="w-20 my-4 relative top-20 z-10">
+                    <!-- text -->
+                    <div class="bg-veryLightGray self-stretch py-16 relative top-3 z-0">
+                        <p class='x text-darkBlue text-xl font-bold'>Ali Bravo</p>
+                        <p class="max-w-xs mx-auto text-center font-semibold text-darkGrayishBlue">"We have been able to cancel so many<br> other subscriptions since using Manage.<br> There is no more cross-channel 
+                            confusion and everyone is much more focused."
+                        </p>
+                    </div>
+                    <div>
+
+                    </div>
+
+                </div>
+                <!-- Richard Watts -->
+                <div class="p-2 hidden md:flex flex-col items-center space-y-4 md:w-1/3">
+                    <!-- img -->
+                    <img src="./img/avatar-richard.png" alt="" class="w-20 my-4 relative top-20 z-10">
+                    <!-- text -->
+                    <div class="bg-veryLightGray self-stretch py-16 relative top-3 z-0">
+                        <p class='x text-darkBlue text-xl font-bold'>Richard Watts</p>
+                        <p class="max-w-xs mx-auto text-center font-semibold text-darkGrayishBlue">
+                            "Manage has superchanged our team workflow. The ability to mantain visibility
+                            on larger milestones at all times keeps everyone motivated.""
+                        </p>
+                    </div>
+                    <div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- button -->
+            <a href='' class=" my-16 px-6 pb-3 pt-2 rounded-full bg-brightRed text-white hover:bg-brightRedLight">Get started.</a>
+            <br><br>
+
+        </div>
+
+    </section>
+    <!-- CallToAction (CTA) section -->
+    <section id="cta" class="bg-brightRed">
+        <!-- flex container -->
+        <div class="container mx-auto md:w-full flex flex-col items-center justify-between px-6 md:px-0 py-24 space-y-12 md:py-12 md:flex-row xl:px-24">
+            <!-- heading -->
+            <h2 class="text-5xl font-bold text-center leading-tight text-white md:text-4xl md:max-w-xl md:text-left">
+                Simplify how<br> your team works today.
+            </h2>
+
+            <!-- button -->
+            <div id="button-container" class="">
+                <a href='' class=" my-16 px-6 pb-3 pt-2 rounded-full shadow-xl bg-white text-brightRed hover:bg-gray-200">Get started.</a>
+                <br><br>
+            </div>
+ 
+
+        </div>
+    </section>
+
+    <footer id="footerOfMine" class="bg-veryDarkBlue">
+        <!-- mobile -->
+        <div class="container flex flex-col mx-auto px-6 md:hidden">
+            <!-- Search input and button -->
+            <div class="flex flex-row items-center justify-center space-x-4 self-center">
+                <!-- search input -->
+                <input class="p-3 rounded-full flex-1 focus:outline-none" placeholder='Updates in your inbox...' type="text">
+                <!-- button -->
+                <a href='' class=" my-16 px-8 py-3 rounded-full shadow-xl bg-brightRed font-semibold text-white hover:bg-brightRedLight">GO</a>
+                <br><br>
+            </div>
+            <!-- Links (all of them); mobile -->
+            <div class="flex flex-row justify-around space-x-6 px-10">
+                <!-- links1 -->
+                <div class="flex flex-col text-white space-y-2">
+                    <a href="#" class="hover:text-brightRed">
+                        Home
+                    </a>
+                    <a href="#" class="hover:text-brightRed">
+                        Pricing
+                    </a>
+                    <a href="#" class="hover:text-brightRed">
+                        Products
+                    </a>
+                    <a href="#" class="hover:text-brightRed">
+                        About us
+                    </a>
+                </div>
+                <!-- links2 -->
+                <div class="flex flex-col text-white space-y-2">
+                    <a href="#" class="hover:text-brightRed">
+                        Careers
+                    </a>
+                    <a href="#" class="hover:text-brightRed">
+                        Community
+                    </a>
+                    <a href="#" class="hover:text-brightRed">
+                        Provacy Policy
+                    </a>
+
+                </div>
+            </div>
+            <!-- Social media -->
+            <div class="flex flex-row justify-center space-x-10 py-8">
+                <img src="/img/icon-facebook.svg" alt="Facebook" class="w-8">
+                <img src="./img/icon-youtube.svg" alt="Youtube" class="w-8">
+                <img src="./img/icon-twitter.svg" alt="Twitter" class="w-8">
+                <img src="./img/icon-pinterest.svg" alt="Pinterest" class="w-8">
+                <img src="./img/icon-instagram.svg" alt="Instagram" class="w-8">
+            </div>
+            <!-- Logo _manage_ -->
+            <div class="flex justify-center py-6 space-y-6">
+                <!-- Horrible logo -->
+                <img src="./img/logo-white.svg" alt="Manage">
+
+            </div>
+            <!-- Copyright -->
+            <div class="flex justify-center py-6 pb-8 space-y-6">
+                <!-- Copyright -->
+                <p class="text-semibold text-darkGrayishBlue">Copyright &copy; 2020. All rights reserved.</p>
+            </div>
+        </div>
+        <!-- md:desktop -->
+        <div class="container xl:px-24 hidden md:flex space-x-20 mx-auto py-12 justify-between">
+            <!-- Manage and socialmedia -->
+            <div class='flex w-1/4 flex-col space-y-16 items-start'>
+                <!-- manage -->
+                <img src="./img/logo-white.svg" class="w-40">
+                <!-- Social media -->
+                <div class="flex flex-row justify-center space-x-4">
+                    <img src="/img/icon-facebook.svg" alt="Facebook" class="w-sm">
+                    <img src="./img/icon-youtube.svg" alt="Youtube" class="w-sm">
+                    <img src="./img/icon-twitter.svg" alt="Twitter" class="w-sm">
+                    <img src="./img/icon-pinterest.svg" alt="Pinterest" class="w-sm">
+                    <img src="./img/icon-instagram.svg" alt="Instagram" class="w-sm">
+                </div>
+
+            </div>
+            <!-- links 1 -->
+            <div class="flex flex-col space-y-2 text-white text-semibold relative xl:-left-36">
+                <a href="#" class="hover:text-brightRed">Home</a>
+                <a href="#" class="hover:text-brightRed">Pricing</a>
+                <a href="#" class="hover:text-brightRed">Products</a>
+                <a href="#" class="hover:text-brightRed">About us</a>
+            </div>
+            <!-- links 2 -->
+            <div class="flex flex-col space-y-3 text-white relative xl:-left-20">
+                <a href="#" class="hover:text-brightRed">
+                    Careers
+                </a>
+                <a href="#" class="hover:text-brightRed">
+                    Community
+                </a>
+                <a href="#" class="hover:text-brightRed">
+                    Privacy Policy
+                </a>
+
+            </div>
+            <!-- Search bar & copy -->
+            <div class="flex flex-col justify-between space-y-3">
+                <!-- search -->
+                <div class="flex space-x-2">
+                    <input type="text" placeholder="Update in your inbox" class="p-3 rounded-full focus:outline-none">
+                    <a href="#" class="bg-brightRed p-3 rounded-full text-white px-4 hover:bg-brightRedLight">Go</a>
+                </div>
+                <!-- copyright -->
+                <p class='text-veryLightGray text-right'>
+                    Copyright &copy; 2020. All rights reserved
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
