@@ -180,7 +180,7 @@
     <!-- Testimonials section -->
     <section id="testimonials">
         <!-- Here we will build our Carousel -->
-        <div class="carousel flex justify-center border border-red-800">
+        <div class="carousel flex justify-center border overflow-x-hidden border-red-800">
 
             <!-- Arrow; left arrow -->
             <button id="left-arrow" 
@@ -189,10 +189,11 @@
                 &lt;
             </button>
 
-            <div id="slider" class="carousel__slider overflow-visible flex text-center">
+            <!-- The Actual SLIDER  -->
+            <div id="slider" class="carousel__slider flex text-center">
 
                 <!-- Anisha Lee -->
-                <div class="p-2 flex flex-col items-center space-y-4 min-w-[33%]">
+                <div class="carousel__card p-2 flex flex-col items-center space-y-4 min-w-full">
                     <!-- img -->
                     <img src="./img/avatar-anisha.png" alt="" class="w-20 my-4 relative top-20 z-10">
                     <!-- text -->
@@ -209,7 +210,7 @@
 
                 </div>
                 <!-- Ali Bravo -->
-                <div class="p-2 flex flex-col items-center space-y-4 min-w-[33%]">
+                <div class="carousel__card p-2 flex flex-col items-center space-y-4 min-w-full">
                     <!-- img -->
                     <img src="./img/avatar-ali.png" alt="" class="w-20 my-4 relative top-20 z-10">
                     <!-- text -->
@@ -225,7 +226,7 @@
 
                 </div>
                 <!-- Richard Watts -->
-                <div class="p-2 flex flex-col items-center space-y-4 min-w-[33%]">
+                <div class="carousel__card p-2 flex flex-col items-center space-y-4 min-w-full">
                     <!-- img -->
                     <img src="./img/avatar-richard.png" alt="" class="w-20 my-4 relative top-20 z-10">
                     <!-- text -->
@@ -244,7 +245,7 @@
 
                 <!-- SECONG THREE -->
                 <!-- Anisha Lee -->
-                <div class="p-2 flex flex-col items-center space-y-4 min-w-[33%]">
+                <div class="carousel__card p-2 flex flex-col items-center space-y-4 min-w-full">
                     <!-- img -->
                     <img src="./img/avatar-anisha.png" alt="" class="w-20 my-4 relative top-20 z-10">
                     <!-- text -->
@@ -261,7 +262,7 @@
 
                 </div>
                 <!-- Ali Bravo -->
-                <div class="p-2 flex flex-col items-center space-y-4 min-w-[33%]">
+                <div class="carousel__card p-2 flex flex-col items-center space-y-4 min-w-full">
                     <!-- img -->
                     <img src="./img/avatar-ali.png" alt="" class="w-20 my-4 relative top-20 z-10">
                     <!-- text -->
@@ -277,7 +278,25 @@
 
                 </div>
                 <!-- Richard Watts -->
-                <div class="p-2 flex flex-col items-center space-y-4 min-w-[33%]">
+                <div class="carousel__card p-2 flex flex-col items-center space-y-4 min-w-full">
+                    <!-- img -->
+                    <img src="./img/avatar-richard.png" alt="" class="w-20 my-4 relative top-20 z-10">
+                    <!-- text -->
+                    <div class="bg-veryLightGray self-stretch py-16 relative top-3 z-0">
+                        <p class='x text-darkBlue text-xl font-bold'>Richard Watts</p>
+                        <p class="max-w-xs mx-auto text-center font-semibold text-darkGrayishBlue">
+                            "Manage has superchanged our team workflow. The ability to mantain visibility
+                            on larger milestones at all times keeps everyone motivated.""
+                        </p>
+                    </div>
+                    <div>
+
+                    </div>
+
+                </div>
+
+                <!-- Richard Watts -->
+                <div class="carousel__card p-2 flex flex-col items-center space-y-4 min-w-full">
                     <!-- img -->
                     <img src="./img/avatar-richard.png" alt="" class="w-20 my-4 relative top-20 z-10">
                     <!-- text -->
@@ -295,9 +314,6 @@
                 </div>
 
 
-                
-
-
             </div>
 
             <!-- Arrow; right arrow -->
@@ -312,20 +328,21 @@
         </div>
 
         <!-- Contains the heading and the testimonials, yea, obviously -->
-        <div class="container mx-auto pt-5 pb-5 text-center">
-            <!-- Heading -->
-            <!-- <h2 class="text-4xl font-bold">
-                What they've said
-            </h2> -->
-
-            <!-- cards/testimonial -->
-            <!-- <div id="cards" class="flex justify-center">
-                
-                
-            </div> -->
-
+        <div class="container mx-auto flex items-baseline md:py-3 pt-5 pb-5 justify-between px-4">
             <!-- button -->
-            <a id="slider-btn" href='' class=" my-16 px-6 mb-6 pb-3 pt-2 rounded-full bg-brightRed text-white hover:bg-brightRedLight">Get started.</a>
+            <a id="slider-btn" href='' 
+                class="my-8 px-6 mb-6 pb-3 pt-2 md:my-0 rounded-full bg-brightRed text-white 
+                     hover:bg-brightRedLight">
+                            Get started.
+            </a>
+
+            <!-- Progress bar -->
+            <div id="progress-bar" class="progress-bar flex space-x-1">
+                <!-- <div class="progress-bar__item bg-slate-800 hover:bg-slate-500 px-3 py-1 rounded-sm cursor-pointer active"></div>
+                <div class="progress-bar__item bg-slate-800 hover:bg-slate-500 px-3 py-1 rounded-sm cursor-pointer"></div>
+                <div class="progress-bar__item bg-slate-800 hover:bg-slate-500 px-3 py-1 rounded-sm cursor-pointer"></div>
+                <div class="progress-bar__item bg-slate-800 hover:bg-slate-500 px-3 py-1 rounded-sm cursor-pointer"></div> -->
+            </div>
 
         </div>
 

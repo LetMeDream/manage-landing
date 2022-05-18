@@ -625,6 +625,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 1rem;
 }
 
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .my-16 {
   margin-top: 4rem;
   margin-bottom: 4rem;
@@ -774,8 +779,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 10rem;
 }
 
-.min-w-\[33\%\] {
-  min-width: 33%;
+.min-w-full {
+  min-width: 100%;
 }
 
 .max-w-md {
@@ -1325,6 +1330,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
+.space-x-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.25rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1rem * var(--tw-space-x-reverse));
@@ -1629,6 +1640,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 9999px;
 }
 
+.rounded-sm {
+  border-radius: 0.125rem;
+}
+
 .rounded {
   border-radius: 0.25rem;
 }
@@ -1760,6 +1775,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-veryLightGray {
   --tw-bg-opacity: 1;
   background-color: hsl(0 0% 98% / var(--tw-bg-opacity));
+}
+
+.bg-slate-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
 }
 
 .bg-veryDarkBlue {
@@ -1941,6 +1961,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-16 {
   padding-top: 4rem;
   padding-bottom: 4rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .py-24 {
@@ -2637,8 +2667,27 @@ body{
 /* .carousel */
 
 .carousel__slider{
+  /* This is gonna be just a CSS variable to control how many cards 
+    are shown in the screen.    */
+  --cards-to-show:1;
   min-width: calc(100vw - 10rem);
   transition: all .8s ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+  .carousel__slider{
+    --cards-to-show:3;
+  }
+
+  .carousel__card{
+    min-width:  calc(100%/var(--cards-to-show))
+  }
+}
+
+/* Now lets work the progress bar features/classes */
+
+.active{
+  background-color: rgb(100,116,139);
 }
 
 .hover\:bg-brightRedLight:hover {
@@ -2649,6 +2698,11 @@ body{
 .hover\:bg-slate-400:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(148 163 184 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-slate-500:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-gray-200:hover {
@@ -2738,6 +2792,11 @@ body{
 }
 
 @media (min-width: 768px) {
+  .md\:my-0 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
   .md\:mb-4 {
     margin-bottom: 1rem;
   }
@@ -2806,6 +2865,11 @@ body{
 
   .md\:bg-transparent {
     background-color: transparent;
+  }
+
+  .md\:py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
   }
 
   .md\:px-0 {

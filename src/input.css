@@ -77,6 +77,24 @@ body{
 
 /* .carousel */
 .carousel__slider{
+    /* This is gonna be just a CSS variable to control how many cards 
+    are shown in the screen.    */
+    --cards-to-show:1;
+
     min-width: calc(100vw - 10rem);
     transition: all .8s ease-in-out;
+}
+@media screen and (min-width: 768px) {
+    .carousel__slider{
+        --cards-to-show:3;
+    }
+
+    .carousel__card{
+        min-width:  calc(100%/var(--cards-to-show))
+    }
+}
+
+/* Now lets work the progress bar features/classes */
+.active{
+    background-color: rgb(100,116,139);
 }
